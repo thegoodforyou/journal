@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<title>theGOODforyou Journal</title>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel='stylesheet' href='./styles.css' type='text/css' media='all' />
+	</head>
+	<body>
+		<div id="main" align="center">
+			<img src="./images/theGOODforyou-JournalLogo.png">
+			<!--ActivityLog Input-->
+			<table id="inputTable" class="inputTable" cellspacing="0" cellpadding="0">
+				<tr>
+					<th class="mini inputTable"><!--[if !IE]> -->
+					<div class="notIE">
+						<!-- <![endif]-->
+						<select id="actSelect" onchange="changeActivity();" name="type" class="mini">
+
+						</select>
+						<!--[if !IE]> -->
+					</div><!-- <![endif]--></th>
+					<th class="inputTable">
+					<input type="text" name="userlog" id="input1" placeholder="What are you doing?">
+					</th>
+					<th class="inputTable">
+					<input type="button" value="Submit" id="submit" name="subtype" >
+					</th>
+					<th class="mini inputTable"><!--[if !IE]> -->
+					<div class="notIE">
+						<!-- <![endif]-->
+
+						<!--<select id="subactSelect">-->
+						<!--change submission type-->
+						<select id="subSelect" onchange="changeSubmit();" name="subtype" class="mini">
+
+						</select>
+						<!--[if !IE]> -->
+					</div><!-- <![endif]--></th>
+				</tr>
+			</table>
+
+			<!--slider control-->
+			Feeling Scale
+			</br>
+			<input type="range" name="points" min="-5" max="5" id="feeling" onchange="document.getElementById('feelingLabel').innerHTML = this.value;"
+			step="1" name="rangeVal" style="width:270px;">
+			</input>
+			</br>
+			<table class="inputTable" style="width:270px;"
+			<tr>
+			<th class="inputTable" style="text-align:left; width:33.3%;">Very Bad</th>
+			<th class="inputTable" style="text-align:center; width:33.3%">    <em id="feelingLabel"style="font-style: normal;"">0</em></th>
+			<th class="inputTable" style="text-align:right; width:33.3%;">Very Good</th>
+			</tr>
+			</table>
+
+			<!--journal-->
+
+			<div id=result>
+			<table id="journalTable">
+			<thead>
+			<tr>
+			<th>Date</th>
+			<th class="hidden">Type</th>
+			<th>Journal Entry</th>
+			<th class="hidden">Submission Type</th>
+			<th class="hidden">Feeling Scale</th>
+			<th class="hidden">Modified</th>
+			<th class="hidden">Modified On</th>
+			<th class="hidden">Deleted</th>
+			<th class="hidden">Deleted On</th>
+
+			</tr>
+			</thead>
+			<tbody id="journalTableBody">
+				
+			</tbody>
+			</table>
+			<br>
+		</div>
+		<script src="./indexeddb.shim.min.js"></script>
+		<script src="./application.js"></script>
+	</body>
+</html>

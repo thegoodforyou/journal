@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    margin:0 auto;
+}
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.inputTable {
+    border: 0px ;
+    padding: 0px;
+    
+}
+
+#inputTable {
+	width:270px;
+}
+
+#journalTable {
+	width:100%;
+}
+
+#input1, #submit {
+	width:100%;
+	min-width:72px;
+}
+
+.mini {
+	width:20px;
+}
+
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+thead {
+	background-color: #47A6FC;
+	color: #ffffff;
+}
+
+#main {
+	width: 95%px;
+	margin:0 auto;
+}
+
+.inputTable, #feeling {
+	display: none;
+}
+
+.journalType {
+	color:blue;
+}
